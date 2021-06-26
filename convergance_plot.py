@@ -21,14 +21,15 @@ def single_round(host, contestant):
     return won
 
 
-def plot_two_lists(list1, list2):
+def plot_two_lists(list1, list2, p1=2/3):
     l = np.ones(N_GAMES + 1)
+    p2 = 1 - p1
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
     ax.plot(list1, color=colors[2], linewidth=2)
     ax.plot(list2, color=colors[3], linewidth=2)
-    ax.plot(l * 0.666667, color=colors[2], linestyle='dotted', linewidth=5, alpha=0.5)
-    ax.plot(l * 0.333333, color=colors[3], linestyle='dotted', linewidth=5, alpha=0.5)
+    ax.plot(l * p1, color=colors[2], linestyle='dotted', linewidth=5, alpha=0.5)
+    ax.plot(l * p2, color=colors[3], linestyle='dotted', linewidth=5, alpha=0.5)
     plt.legend(['Empirical win probability if you switch',
                 'Empirical win probability if you do not switch',
                 'Theoretical win probability if you switch',
