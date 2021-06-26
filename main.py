@@ -7,7 +7,7 @@ VERBOSE = False
 N_DOORS = 3
 
 if __name__ == '__main__':
-    print("--------------Welcome to the imaginary Monte Hall show-----------------------")
+    print("--------------Welcome to the imaginary Monty Hall show-----------------------")
     print("--------------You will play this for {0:2d} times-----------------------".format(N_GAMES))
     print("--------------There are {0:2d} doors -----------------------".format(N_DOORS))
     if WILL_YOU_SWITCH:

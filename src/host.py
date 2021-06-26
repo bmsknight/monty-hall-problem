@@ -6,7 +6,6 @@ class Host:
     def __init__(self, door_count=3):
         assert door_count >= 3
         self._car_index = int(random.uniform(0, door_count))
-        self.doors = [0] * door_count
         self.door_count = door_count
 
     def present_doors(self):
@@ -16,7 +15,7 @@ class Host:
         if contestant_selection == self._car_index:
             while True:
                 alternative_door = int(random.uniform(0, self.door_count))
-                if alternative_door != self._car_index:
+                if alternative_door != contestant_selection:
                     return alternative_door
         else:
             return self._car_index
