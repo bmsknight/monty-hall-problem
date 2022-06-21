@@ -41,6 +41,7 @@ def plot_two_lists(list1, list2, p1=2/3):
     fig.set_size_inches(12, 9)
     plt.tight_layout(pad=4.0)
     plt.savefig("convergence_plot.png", dpi=400)
+    plt.show()
 
 
 if __name__ == '__main__':
